@@ -19,4 +19,10 @@ public class Person {
     private final String name;
     private final LocalDate birthday;
 
+    public int age(){
+        long day = LocalDate.now().toEpochDay() - birthday.toEpochDay();
+        return (int) (day/365.25);
+
+    }
+
 }
